@@ -1,0 +1,39 @@
+@import "src/styles.scss";
+
+.background{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: unset;
+  justify-content: center;
+
+  .c_textcontent{
+      width: 60%;
+      padding: 16px;
+
+    .c_general, .c_family, .c_appearance, .c_character, .c_backstory{
+      background-color: $color-primary;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: center;
+
+      padding: 16px;
+      margin-bottom: 16px;
+      border-radius: 10px;
+
+
+
+    }
+
+  }
+      .c_pic{
+      width: 35%;
+      text-align: center;
+      }
+
+}
+
+

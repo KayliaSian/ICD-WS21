@@ -1,0 +1,25 @@
+@import "src/styles.scss";
+
+.background{
+  display: flex;
+  flex-direction: row;
+
+
+  .l_general{
+    width: 60%;
+    background-color: $color-primary;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .l_pic{
+        width: 35%;
+        text-align: center;
+        }
+}

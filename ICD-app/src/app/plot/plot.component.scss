@@ -1,0 +1,27 @@
+@import "src/styles.scss";
+
+.plot_general{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .chapter_List{
+    background-color: $color-primary;
+    width: 60%;
+    padding: 16px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    line-height: 150%;
+
+  }
+    .story_pic{
+      width: 35%;
+      text-align: center;
+    }
+}
