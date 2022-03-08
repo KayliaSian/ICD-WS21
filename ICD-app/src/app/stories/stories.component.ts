@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
+import { Story } from '../models/story.model'
 
 @Component({
   selector: 'app-stories',
@@ -7,7 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StoriesComponent implements OnInit {
 
-  constructor() { }
+ stories$ : Observable<Story[]> = new Observable<Story[]>();
+
+  constructor(private db: AngularFirestore) {
+    this.stories$ = db.collection<Story>('stories').valueChanges({ idField: 'id' });
+    this.stories$.subscribe(console.log);
+  }
 
   ngOnInit(): void {
   }

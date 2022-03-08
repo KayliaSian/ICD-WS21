@@ -1,0 +1,19 @@
+<div class="background">
+
+  <ng-container *ngIf="story$|async as story">
+
+  <div class="bold headline">{{story.name}}</div>
+
+  <div class="story_general">
+    <div class="chapter_List">
+      <a *ngFor="let chapter of story.chapters" href="/chapter">{{chapter.name}}</a>
+    </div>
+
+    <div class="story_pic">
+      Platzhalter für Bild
+    </div>
+
+  </div>
+  </ng-container>
+</div>
+

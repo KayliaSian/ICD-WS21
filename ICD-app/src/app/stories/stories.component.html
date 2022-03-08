@@ -1,16 +1,14 @@
 <div class="background">
-
-  <div class="bold headline">[Story_name]</div>
+<ng-container *ngIf="stories$|async as stories">
+  <div class="bold headline">{{stories[1].name}}</div>
 
   <div class="stories_general">
     <div class="plot_List">
-      <a href="/plot">ACOTAR</a>
-      <a href="/plot">HLH</a>
-      <a href="/plot">TFIOS</a>
-      <a href="/plot">Eternally Yours</a>
+      <a *ngFor="let story of stories" [href]="'/story/'+story.id">{{story.name}}</a>
 
     </div>
 
   </div>
+</ng-container>
 </div>
 
