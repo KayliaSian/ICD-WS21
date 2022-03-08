@@ -1,17 +1,18 @@
 <div class="background">
+  <ng-container *ngIf="characters$|async as characters">
+    <div class="bold headline">List of your characters:</div>
 
-  <div class="char_list">
+    <div class="character_general">
 
-    List of all your characters:
-
-    <div class="character_component">
-
-      Platzhalter für Bild
-
-      <a href="/character">Charactername</a>
+      <div *ngFor="let character of characters"  class="character_List">
+        <div class="character_pics">
+          Platzhalter für Bild
+        </div>
+        <a [href]="'/character/'+character.id">{{character.name}}</a>
+      </div>
     </div>
-  </div>
 
 
+  </ng-container>
 </div>
 

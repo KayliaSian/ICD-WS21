@@ -1,61 +1,57 @@
 <div class="background">
+  <ng-container *ngIf="character$|async as character">
 
-  <div class="bold headline">[cName]</div>
+    <div class="bold headline">{{character.name}}</div>
 
-  <div class="c_textcontent">
+    <div class="c_textcontent">
 
-    <div class="c_general">
+      <div class="c_general">
 
-      <div><span class="bold">Nickname: </span>[cNickname]</div>
-      <div><span class="bold">Age: </span>[cAge]</div>
-      <div><span class="bold">Birthdate: </span>[cDate]</div>
-      <div><span class="bold">Birthplace: </span>[cPlace]</div>
-    </div>
-
-    <div class="c_family">
-      <div><span class="bold">Mother: </span>[cMother]</div>
-      <div><span class="bold">Father: </span>[cFather]</div>
-      <div><span class="bold">Siblings: </span>[cSiblings]</div>
-      <div><span class="bold">Friends: </span>[cFriends]</div>
-    </div>
-
-    <div class="c_appearance">
-      <div><span class="bold">Haircolour: </span>[cHaircolour]</div>
-      <div><span class="bold">Eyecolour: </span>[cEyecolour]</div>
-      <div><span class="bold">Height: </span>[cHeight]</div>
-      <div><span class="bold">Weight: </span>[cWeight]</div>
-      <div><span class="bold">Bodytype: </span>[cBodytype]</div>
-    </div>
-
-    <div class="c_character">
-
-      <div class="bold">Character Traits:</div>
-      <div>
-        <ul>
-          <li>Trait 1</li>
-          <li>Trait 2</li>
-          <li>Trait 3</li>
-          <li>Trait 4</li>
-          <li>Trait 5</li>
-          <li>Trait 6</li>
-        </ul>
+        <div><span class="bold">Nickname: </span>{{character.name}}</div>
+        <div><span class="bold">Age: </span>{{character.age}}</div>
+        <div><span class="bold">Birthdate: </span>{{character.birthdate}}</div>
+        <div><span class="bold">Birthplace: </span>{{character.birthplace}}</div>
       </div>
 
-      <div><span class="bold">Likes:</span></div>
-      <div><span class="bold">Dislikes:</span></div>
+      <div class="c_family">
+        <div><span class="bold">Mother: </span>{{character.mother}}</div>
+        <div><span class="bold">Father: </span>{{character.father}}</div>
+        <div *ngFor="let sibling of character.siblings"><span class="bold">Siblings: </span>{{sibling.name}}</div>
+      </div>
+
+      <div class="c_appearance">
+        <div><span class="bold">Haircolour: </span>{{character.haircolour}}</div>
+        <div><span class="bold">Eyecolour: </span>{{character.eyecolour}}</div>
+        <div><span class="bold">Height: </span>{{character.height}}</div>
+        <div><span class="bold">Weight: </span>{{character.weight}}</div>
+        <div><span class="bold">Bodytype: </span>{{character.bodytype}}</div>
+      </div>
+
+      <div class="c_character">
+
+        <div class="bold">Character Traits:</div>
+        <div>
+          <ul>
+            <li *ngFor="let traits of character.traits">{{traits.trait}}</li>
+          </ul>
+        </div>
+
+        <div *ngFor="let likes of character.likes"><span class="bold">Likes</span> {{likes.like}}</div>
+        <div *ngFor="let dislikes of character.dislikes"><span class="bold">Dislikes</span> {{dislikes.dislike}}
+        </div>
+      </div>
+
+
+      <div class="c_backstory">
+
+        {{character.backstory}}
+
+      </div>
+    </div>
+    <div class="c_pic">
+      Platzhalter für Bild
     </div>
 
-
-    <div class="c_backstory">
-
-      [cBackstory]
-
-    </div>
-  </div>
-  <div class="c_pic">
-    Platzhalter für Bild
-  </div>
-
-
+  </ng-container>
 </div>
 

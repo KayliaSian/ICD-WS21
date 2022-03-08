@@ -1,13 +1,13 @@
 <div class="background">
+  <ng-container *ngIf="location$|async as location">
+    <div class="l_general">
+      <div><span class="bold">Name:</span> {{location.name}}</div>
+      <div><span class="bold">Location Type:</span> {{location.type}}</div>
+      <div><span class="bold">Description:</span> {{location.description}}</div>
 
-  <div class="l_general">
-    <div><span class="bold">Name:</span> [lName]</div>
-    <div><span class="bold">Location Type:</span> [lType]</div>
-    <div><span class="bold">Description:</span> [lDesc] </div>
+    </div>
 
-  </div>
+    <div class="l_pic">Platzhalter für Bild</div>
 
-  <div class="l_pic">Platzhalter für Bild</div>
-
-
+  </ng-container>
 </div>

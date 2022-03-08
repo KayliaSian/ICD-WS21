@@ -13,10 +13,10 @@ import { ChaptersComponent } from './chapters/chapters.component';
 const routes: Routes = [
   { path: '', component: LandingpageComponent},
   { path: 'characterlist', component: CharacterlistComponent},
-  { path: 'character/id', component: CharacterComponent},
-  { path: 'location/id', component: LocationComponent},
+  { path: 'character/:id', component: CharacterComponent},
+  { path: 'location/:id', component: LocationComponent},
   { path: 'story/:id', component: StoryComponent},
-  { path: 'chapter/id', component: ChaptersComponent},
+  { path: 'chapter/:id', component: ChaptersComponent},
   { path: 'stories', component: StoriesComponent}
 ];
 

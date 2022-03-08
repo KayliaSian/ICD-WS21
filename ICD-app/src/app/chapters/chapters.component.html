@@ -1,6 +1,6 @@
 <div class="background">
-
-  <div class="bold headline">[chapName]</div>
+  <ng-container *ngIf="story$|async as story">
+  <div class="bold headline">{{story.chapters[0].name}}</div>
 
   <div class="chap_wrap">
     <div class="chap_general">
@@ -10,9 +10,9 @@
     </div>
 
     <div class="chap_desc">
-      <div><span class="bold">Chapter: </span> [chapDesc]</div>
+      <div><span class="bold">Chapter: </span> {{story.chapters[0].chapText}}</div>
     </div>
 
   </div>
-
+  </ng-container>
 </div>
