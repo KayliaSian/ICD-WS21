@@ -3,19 +3,17 @@
 .character_general{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 
   .character_List{
     background-color: $color-primary;
-    width: 90%;
+    width: 40%;
     padding: 16px;
     padding: 16px;
     margin-bottom: 16px;
     border-radius: 10px;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
 
     text-align: center;
     line-height: 150%;

@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { ReactiveFormsModule } from "@angular/forms";
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/Auth';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LandingpageComponent } from './landingpage/landingpage.component';
+import { LandingpageComponent } from './components/landingpage/landingpage.component';
 import { CharacterlistComponent } from './characterlist/characterlist.component';
-import { CharacterComponent } from './character/character.component';
-import { LocationComponent } from './location/location.component';
-import { StoryComponent } from './story/story.component';
+import { CharacterComponent } from './components/character/character.component';
+import { LocationComponent } from './components/location/location.component';
+import { StoryComponent } from './components/story/story.component';
 import { StoriesComponent } from './stories/stories.component';
-import { ChaptersComponent } from './chapters/chapters.component';
+import { ChaptersComponent } from './components/chapters/chapters.component';
+//import { EditCharacterComponent } from './shared/edit-character/edit-character.component';
+import { CharacterService } from "./shared/character.service";
 
 
 const config = {
@@ -35,14 +39,16 @@ const config = {
     StoryComponent,
     StoriesComponent,
     ChaptersComponent,
+    //EditCharacterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
   ],
-  providers: [],
+  providers: [CharacterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

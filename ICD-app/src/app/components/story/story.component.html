@@ -6,11 +6,7 @@
 
   <div class="story_general">
     <div class="chapter_List">
-      <a *ngFor="let chapter of story.chapters" [href]="'/chapter/'+chapter.id">{{chapter.name}}</a>
-    </div>
-
-    <div class="story_pic">
-      Platzhalter für Bild
+      <a *ngFor="let chapter of chapters$|async" [href]="'/chapter/'+this.storyid+'/'+chapter.id">{{chapter.name}}</a>
     </div>
 
   </div>
