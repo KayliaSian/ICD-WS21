@@ -1,9 +1,19 @@
-<div class="form-container">
-  <h2>Login</h2>
-  <form #formData='ngForm' (ngSubmit)='onSubmit(formData)'>
-    <input type="text" placeholder="Email address" name="email" class="input-txt" required>
-    <input type="password" placeholder="Password" name="password" class="input-txt" required>
-    <button type="submit" [disabled]="!formData.valid" class="auth-btn">Log in</button>
-  </form>
-  <a routerLink="/signup" routerLinkActive="active" class="create-account-txt">No account? <strong>Create one here</strong></a>
+<div class="displayTable">
+  <div class="displayTableCell">
+    <div class="authBlock">
+      <h3>Sign In</h3>
+      <div class="formGroup">
+        <input type="text" class="formControl" placeholder="Username" #userName required>
+      </div>
+      <div class="formGroup">
+        <input type="password" class="formControl" placeholder="Password" #userPassword required>
+      </div>
+      <div class="formGroup">
+        <input type="button" class="btn btnPrimary" value="Log in" (click)="authService.SignIn(userName.value, userPassword.value)">
+      </div>
+    </div>
+    <div class="redirectToLogin">
+      <span>Don't have an account?<span class="redirect" routerLink="/signup"> Sign Up</span></span>
+    </div>
+  </div>
 </div>

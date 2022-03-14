@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ReactiveFormsModule, FormsModule } from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/Auth';
 
@@ -20,9 +20,11 @@ import { AuthService } from "./services/auth.service";
 import { CharacterService } from "./shared/character.service";
 
 import { LoginComponent } from './components/login/login.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { AddCharacterComponent } from './shared/add-character/add-character.component';
 import { CharacterListComponent } from './shared/character-list/character-list.component';
 import { EditCharacterComponent } from './shared/edit-character/edit-character.component';
+
 
 
 
@@ -47,10 +49,12 @@ const config = {
     StoriesComponent,
     ChaptersComponent,
     LoginComponent,
-    //AddCharacterComponent,
+    AddCharacterComponent,
     CharacterListComponent,
     EditCharacterComponent,
+    SignupComponent,
     //EditCharacterComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -58,9 +62,10 @@ const config = {
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
-    ReactiveFormsModule,
-    FormsModule,
+    FormsModule
+
   ],
+  exports:[FormsModule,],
   providers: [CharacterService, AuthService],
   bootstrap: [AppComponent]
 })

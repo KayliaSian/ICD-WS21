@@ -9,7 +9,7 @@ birthplace?:string;
 
 mother?:string;
 father?:string;
-siblings?:{name:string}[];
+siblings?:string;
 
 haircolour?:string;
 eyecolour?:string;
@@ -17,10 +17,10 @@ height?:string;
 weight?:string;
 bodytype?:string;
 
-traits?:{trait:string}[];
+traits?:string;
 
-likes?:{like:string}[];
-dislikes?:{dislike:string}[];
+likes?:string;
+dislikes?:string;
 
 backstory?:string;
 

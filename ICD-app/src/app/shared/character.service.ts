@@ -23,6 +23,7 @@ export class CharacterService {
 
   // Create Character
   AddCharacter(character: Character) {
+  console.log(character);
     this.charactersRef.add({
 
       name:character.name,

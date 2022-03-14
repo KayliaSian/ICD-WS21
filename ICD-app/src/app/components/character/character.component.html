@@ -16,7 +16,7 @@
       <div class="c_family">
         <div><span class="bold">Mother: </span>{{character.mother}}</div>
         <div><span class="bold">Father: </span>{{character.father}}</div>
-        <div *ngFor="let sibling of character.siblings"><span class="bold">Siblings: </span>{{sibling.name}}</div>
+        <div><span class="bold">Siblings: </span>{{character.siblings}}</div>
       </div>
 
       <div class="c_appearance">
@@ -32,12 +32,12 @@
         <div class="bold">Character Traits:</div>
         <div>
           <ul>
-            <li *ngFor="let traits of character.traits">{{traits.trait}}</li>
+            <li>{{character.traits}}</li>
           </ul>
         </div>
 
-        <div *ngFor="let likes of character.likes"><span class="bold">Likes</span> {{likes.like}}</div>
-        <div *ngFor="let dislikes of character.dislikes"><span class="bold">Dislikes</span> {{dislikes.dislike}}
+        <div ><span class="bold">Likes</span> {{character.likes}}</div>
+        <div ><span class="bold">Dislikes</span> {{character.dislikes}}
         </div>
       </div>
 

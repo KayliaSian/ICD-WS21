@@ -1,7 +1,7 @@
 <div class="pt-3 pb-2 mb-3 border-bottom">
   <h2 class="h2">Add Character</h2>
 </div>
-<form #characterForm (submit)="submitCharacterData()">
+<div>
   <div class="row">
     <div class="col-lg-5 col-md-12 col-sm-12">
       <div class="row">
@@ -10,7 +10,7 @@
           <label>Name</label>
           <input
             type="text"
-            formControlName="name"
+            [(ngModel)]="name"
             class="form-control"
           />
         </div>
@@ -18,7 +18,7 @@
           <label>ID</label>
           <input
             type="text"
-            formControlName="id"
+            [(ngModel)]="id"
             class="form-control"
 
           />
@@ -28,7 +28,7 @@
           <label>nickname</label>
           <input
             type="text"
-            formControlName="nickname"
+            [(ngModel)]="nickname"
             class="form-control" />
         </div>
       </div>
@@ -38,7 +38,7 @@
           <label>age</label>
           <input
             type="text"
-            formControlName="age"
+            [(ngModel)]="age"
             class="form-control"
           />
         </div>
@@ -47,7 +47,7 @@
           <label>birthdate</label>
           <input
             type="text"
-            formControlName="birthdate"
+            [(ngModel)]="birthdate"
             class="form-control"
           />
         </div>
@@ -56,7 +56,7 @@
         <label>birthplace</label>
         <input
           type="text"
-          formControlName="birthplace"
+          [(ngModel)]="birthplace"
           class="form-control"
         />
       </div>
@@ -65,7 +65,7 @@
       <label>mother</label>
       <input
         type="text"
-        formControlName="mother"
+        [(ngModel)]="mother"
         class="form-control"
       />
     </div>
@@ -74,7 +74,7 @@
     <label>father</label>
     <input
       type="text"
-      formControlName="father"
+      [(ngModel)]="father"
       class="form-control"
     />
   </div>
@@ -83,7 +83,7 @@
     <label>siblings</label>
     <input
       type="text"
-      formControlName="siblings"
+      [(ngModel)]="siblings"
       class="form-control"
     />
   </div>
@@ -92,7 +92,7 @@
     <label>haircolour</label>
     <input
       type="text"
-      formControlName="haircolour"
+      [(ngModel)]="haircolour"
       class="form-control"
     />
   </div>
@@ -101,7 +101,7 @@
     <label>eyecolour</label>
     <input
       type="text"
-      formControlName="eyecolour"
+      [(ngModel)]="eyecolour"
       class="form-control"
     />
   </div>
@@ -110,7 +110,7 @@
     <label>height</label>
     <input
       type="text"
-      formControlName="height"
+      [(ngModel)]="height"
       class="form-control"
     />
   </div>
@@ -119,7 +119,7 @@
     <label>weight</label>
     <input
       type="text"
-      formControlName="weight"
+      [(ngModel)]="weight"
       class="form-control"
     />
   </div>
@@ -128,7 +128,7 @@
     <label>bodytype</label>
     <input
       type="text"
-      formControlName="bodytype"
+      [(ngModel)]="bodytype"
       class="form-control"
     />
   </div>
@@ -137,7 +137,7 @@
     <label>traits</label>
     <input
       type="text"
-      formControlName="traits"
+      [(ngModel)]="traits"
       class="form-control"
     />
   </div>
@@ -146,7 +146,7 @@
     <label>likes</label>
     <input
       type="text"
-      formControlName="likes"
+      [(ngModel)]="likes"
       class="form-control"
     />
   </div>
@@ -155,7 +155,7 @@
     <label>dislikes</label>
     <input
       type="text"
-      formControlName="dislikes"
+      [(ngModel)]="dislikes"
       class="form-control"
     />
   </div>
@@ -164,7 +164,7 @@
     <label>backstory</label>
     <input
       type="text"
-      formControlName="backstory"
+      [(ngModel)]="backstory"
       class="form-control"
     />
   </div>
@@ -172,12 +172,13 @@
 
       <div class="form-group text-right">
         <button
-          type="submit"
+          type="button"
           class="btn btn-success"
+          (click)="submitCharacterData()"
         >
-          Add Student
+          Add Character
         </button>
       </div>
     </div>
   </div>
-</form>
+</div>
