@@ -8,8 +8,7 @@
 // project base colors
 $color-background: #1A2021 !default;
 $color-primary: #1B2528 !default;
-$color-secondary: #25708C !default;
-$color-highlight: #C2C2C2 !default;
+$color-highlight: #25708C !default;
 $color-default: #30C5FF !default;
 
 
@@ -61,7 +60,7 @@ $button-color-active: $color-primary !default;
 
 $checkbox-icon: $color-primary;
 
-html, body { height: 100%; width: 100%;}
+html, body { height: 100%; width: 100%; background-color: $color-background;}
 body { margin: 0;}
 
 a {color: $color-highlight; text-decoration: none;}

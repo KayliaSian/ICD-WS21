@@ -1,0 +1,15 @@
+@import "src/styles.scss";
+
+form{
+  display: flex;
+  justify-content: space-evenly;
+
+  label{
+    color: $color-highlight;
+  }
+
+}
+
+h2{
+    color: $color-highlight;
+}

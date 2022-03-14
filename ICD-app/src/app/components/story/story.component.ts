@@ -12,16 +12,14 @@ import { Location } from '../../models/location.model'
   styleUrls: ['./story.component.scss']
 })
 export class StoryComponent implements OnInit {
-  storyid:string;
- story$ : Observable<Story | undefined> = new Observable<Story | undefined>();
- chapters$ : Observable<Chapter[]> = new Observable<Chapter[]>();
- locations$ : Observable<Location> = new Observable<Location>();
+  storyid: string;
+  story$ : Observable<Story | undefined> = new Observable<Story | undefined>();
+  chapters$ : Observable<Chapter[]> = new Observable<Chapter[]>();
 
   constructor(private db: AngularFirestore, private route: ActivatedRoute) {
     this.storyid=this.route.snapshot.params['storyid'];
     this.story$ = db.doc<Story| undefined>('stories/'+this.storyid).valueChanges();
     this.chapters$ = db.collection<Chapter>('stories/'+this.storyid+'/chapters').valueChanges();
-    this.story$.subscribe(story=>{this.locations$=db.doc<Location>('locations/'+story.locationId).valueChanges()});
   }
 
   ngOnInit(): void {

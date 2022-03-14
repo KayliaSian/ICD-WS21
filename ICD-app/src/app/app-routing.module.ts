@@ -8,6 +8,10 @@ import { LocationComponent } from './components/location/location.component';
 import { StoryComponent } from './components/story/story.component';
 import { StoriesComponent } from './stories/stories.component';
 import { ChaptersComponent } from './components/chapters/chapters.component';
+import { LoginComponent } from './components/login/login.component';
+import { AddCharacterComponent } from './shared/add-character/add-character.component';
+import { EditCharacterComponent } from './shared/edit-character/edit-character.component';
+import { CharacterListComponent } from './shared/character-list/character-list.component';
 
 
 const routes: Routes = [
@@ -17,7 +21,11 @@ const routes: Routes = [
   { path: 'location/:id', component: LocationComponent},
   { path: 'story/:storyid', component: StoryComponent},
   { path: 'chapter/:storyid/:chapterid', component: ChaptersComponent},
-  { path: 'stories', component: StoriesComponent}
+  { path: 'stories', component: StoriesComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'add-character', component: AddCharacterComponent},
+  { path: 'view-characters', component: CharacterListComponent},
+  { path: 'edit-charactr/:id', component: EditCharacterComponent}
 ];
 
 @NgModule({
