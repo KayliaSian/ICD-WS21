@@ -28,7 +28,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'add-character', component: AddCharacterComponent},
   { path: 'view-characters', component: CharacterListComponent},
-  { path: 'edit-charactr/:id', component: EditCharacterComponent}
+  { path: 'edit-character/:id', component: EditCharacterComponent}
 ];
 
 @NgModule({

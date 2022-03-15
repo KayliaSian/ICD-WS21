@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommonModule } from '@angular/common';
 
 import { FormsModule } from "@angular/forms";
 import { AngularFireModule } from '@angular/fire/compat';
@@ -53,8 +54,6 @@ const config = {
     CharacterListComponent,
     EditCharacterComponent,
     SignupComponent,
-    //EditCharacterComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -62,10 +61,10 @@ const config = {
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
-    FormsModule
-
+    FormsModule,
+    CommonModule
   ],
-  exports:[FormsModule,],
+  exports:[FormsModule],
   providers: [CharacterService, AuthService],
   bootstrap: [AppComponent]
 })

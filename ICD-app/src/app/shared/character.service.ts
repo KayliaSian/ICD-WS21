@@ -16,7 +16,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class CharacterService {
 
   charactersRef = this.db.collection("characters");
-  characterRef = (id: string) => this.db.doc("characters/${id}");
+  characterRef = (id: string | null) => this.db.doc("characters/"+id);
 
   constructor(private db: AngularFirestore) {}
 
@@ -54,7 +54,7 @@ export class CharacterService {
 
 
   // Fetch Single Character Object
-  GetCharacter(id: string) {
+  GetCharacter(id: string | null) {
     return this.characterRef(id).valueChanges();
   }
 
@@ -65,9 +65,10 @@ export class CharacterService {
 
   // Update Character Object
   UpdateCharacter(character: Character) {
+  console.log(character.id);
     this.characterRef(character.id).update({
       name:character.name,
-      id:character.id,
+      //id:character.id,
       nickname:character.nickname,
       age:character.age,
       birthdate:character.birthdate,
@@ -92,7 +93,7 @@ export class CharacterService {
     });
   }
   // Delete Character Object
-  DeleteCharacter(id: string) {
+  DeleteCharacter(id: string | null) {
     return this.characterRef(id).delete();
   }
 }
