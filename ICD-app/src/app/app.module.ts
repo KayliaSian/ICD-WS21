@@ -23,8 +23,14 @@ import { CharacterService } from "./shared/character.service";
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AddCharacterComponent } from './shared/add-character/add-character.component';
-import { CharacterListComponent } from './shared/character-list/character-list.component';
 import { EditCharacterComponent } from './shared/edit-character/edit-character.component';
+import { AddLocationComponent } from './shared/add-location/add-location.component';
+import { EditLocationComponent } from './shared/edit-location/edit-location.component';
+import { LocationlistComponent } from './locationlist/locationlist.component';
+import { AddStoryComponent } from './shared/add-story/add-story.component';
+import { EditStoryComponent } from './shared/edit-story/edit-story.component';
+import { AddChapterComponent } from './shared/add-chapter/add-chapter.component';
+import { EditChapterComponent } from './shared/edit-chapter/edit-chapter.component';
 
 
 
@@ -51,9 +57,15 @@ const config = {
     ChaptersComponent,
     LoginComponent,
     AddCharacterComponent,
-    CharacterListComponent,
     EditCharacterComponent,
     SignupComponent,
+    AddLocationComponent,
+    EditLocationComponent,
+    LocationlistComponent,
+    AddStoryComponent,
+    EditStoryComponent,
+    AddChapterComponent,
+    EditChapterComponent,
   ],
   imports: [
     BrowserModule,

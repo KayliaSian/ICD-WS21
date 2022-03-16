@@ -14,12 +14,12 @@ export class ChaptersComponent implements OnInit {
 
  chapter$ : Observable<Chapter | undefined> = new Observable<Chapter | undefined>();
  char$ : Observable<Character | undefined> = new Observable<Character | undefined>();
- location$ : Observable<Location | undefined> = new Observable<Location | undefined>();
 
 
   constructor(private db: AngularFirestore, private route: ActivatedRoute) {
     const storyid =this.route.snapshot.params['storyid'];
     const chapterid =this.route.snapshot.params['chapterid'];
+    console.log(storyid);
 
     this.chapter$ = db.doc<Chapter| undefined>('stories/'+storyid+'/chapters/'+chapterid).valueChanges();
     this.chapter$.subscribe(console.log);

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CharacterListComponent } from './character-list.component';
+import { EditLocationComponent } from './edit-location.component';
 
-describe('CharacterListComponent', () => {
-  let component: CharacterListComponent;
-  let fixture: ComponentFixture<CharacterListComponent>;
+describe('EditLocationComponent', () => {
+  let component: EditLocationComponent;
+  let fixture: ComponentFixture<EditLocationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CharacterListComponent ]
+      declarations: [ EditLocationComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CharacterListComponent);
+    fixture = TestBed.createComponent(EditLocationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

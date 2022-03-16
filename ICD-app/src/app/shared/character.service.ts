@@ -23,8 +23,8 @@ export class CharacterService {
 
   // Create Character
   AddCharacter(character: Character) {
-  console.log(character);
-    this.charactersRef.add({
+    const cid : string = character.id!;
+      this.charactersRef.doc(cid).set({
 
       name:character.name,
       id:character.id,
@@ -54,7 +54,7 @@ export class CharacterService {
 
 
   // Fetch Single Character Object
-  GetCharacter(id: string | null) {
+  GetCharacter(id: string) {
     return this.characterRef(id).valueChanges();
   }
 
@@ -93,7 +93,7 @@ export class CharacterService {
     });
   }
   // Delete Character Object
-  DeleteCharacter(id: string | null) {
+  DeleteCharacter(id: string) {
     return this.characterRef(id).delete();
   }
 }

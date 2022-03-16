@@ -1,0 +1,19 @@
+<div class="background">
+  <ng-container *ngIf="locations$|async as locations">
+    <div class="bold headline">List of your location</div>
+
+    <div class="location_general">
+
+      <div *ngFor="let location of locations"  class="location_List">
+        <a [href]="'/location/'+location.id">{{location.name}}</a>
+        <button
+          class="btn btn-outline-danger btn-sm"
+          (click)="deleteLocation(location)"
+        >Delete</button
+        >
+      </div>
+    </div>
+
+  </ng-container>
+</div>
+

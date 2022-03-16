@@ -1,7 +1,7 @@
 export interface Character{
 
 name:string;
-id:string | null;
+id:string;
 nickname?:string;
 age?:string;
 birthdate?:string;

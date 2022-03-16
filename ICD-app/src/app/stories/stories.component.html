@@ -1,11 +1,15 @@
 <div class="background">
 <ng-container *ngIf="stories$|async as stories">
-  <div class="bold headline">{{stories[1].name}}</div>
+  <div class="bold headline">All your Stories</div>
 
   <div class="stories_general">
-    <div class="plot_List">
-      <a *ngFor="let story of stories" [href]="'/story/'+story.id">{{story.name}}</a>
-
+    <div *ngFor="let story of stories" class="stories_List">
+      <a [href]="'/story/'+story.id">{{story.name}}</a>
+      <button
+        class="btn btn-outline-danger btn-sm"
+        (click)="deleteStory(story)"
+      >Delete</button
+      >
     </div>
 
   </div>

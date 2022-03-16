@@ -38,22 +38,14 @@ export class EditCharacterComponent implements OnInit {
                   private router: Router,) { }
 
 ngOnInit() {
- const id = this.actRoute.snapshot.paramMap.get('id');
-    console.log(id);
+ const id = this.actRoute.snapshot.paramMap.get('id')!;
     this.crudApi
       .GetCharacter(id)
-      //.valueChanges();
-      console.log(this.crudApi.GetCharacter(id));
-      console.log(id);
   }
 
   updateForm() {
-    this.crudApi.UpdateCharacter({name : this.name, id : this.actRoute.snapshot.paramMap.get('id'), nickname : this.nickname, age : this.age, birthdate : this.birthdate, birthplace : this.birthplace, mother : this.mother, father : this.father, siblings : this.siblings, haircolour : this.haircolour, eyecolour : this.eyecolour, height : this.height, weight : this.weight, bodytype : this.bodytype, traits : this.traits, likes : this.likes, dislikes: this.dislikes, backstory : this.backstory});
+    this.crudApi.UpdateCharacter({name : this.name, id : this.actRoute.snapshot.paramMap.get('id')!, nickname : this.nickname, age : this.age, birthdate : this.birthdate, birthplace : this.birthplace, mother : this.mother, father : this.father, siblings : this.siblings, haircolour : this.haircolour, eyecolour : this.eyecolour, height : this.height, weight : this.weight, bodytype : this.bodytype, traits : this.traits, likes : this.likes, dislikes: this.dislikes, backstory : this.backstory});
     this.router.navigate(['characterlist']);
   }
 
-
-  /* deleteCharacter() {
-        this.crudApi.DeleteCharacter(this.actRoute.snapshot.paramMap.get('id'))
-    } */
 }

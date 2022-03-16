@@ -5,8 +5,13 @@
   <div class="bold headline">{{story.name}}</div>
 
   <div class="story_general">
-    <div class="chapter_List">
-      <a *ngFor="let chapter of chapters$|async" [href]="'/chapter/'+this.storyid+'/'+chapter.id">{{chapter.name}}</a>
+    <div *ngFor="let chapter of chapters$|async"  class="chapter_List">
+      <a [href]="'/chapter/'+this.storyid+'/'+chapter.id">{{chapter.name}}</a>
+      <button
+        class="btn btn-outline-danger btn-sm"
+        (click)="deleteChapter(chapter)"
+      >Delete</button
+      >
     </div>
 
   </div>

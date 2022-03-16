@@ -12,13 +12,21 @@ import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AddCharacterComponent } from './shared/add-character/add-character.component';
 import { EditCharacterComponent } from './shared/edit-character/edit-character.component';
-import { CharacterListComponent } from './shared/character-list/character-list.component';
+import { AddLocationComponent } from './shared/add-location/add-location.component';
+import { EditLocationComponent } from './shared/edit-location/edit-location.component';
+import { LocationlistComponent } from './locationlist/locationlist.component';
+import { AddStoryComponent } from './shared/add-story/add-story.component';
+import { EditStoryComponent } from './shared/edit-story/edit-story.component';
+import { AddChapterComponent } from './shared/add-chapter/add-chapter.component';
+import { EditChapterComponent } from './shared/edit-chapter/edit-chapter.component';
+
 
 
 
 const routes: Routes = [
   { path: '', component: LandingpageComponent},
   { path: 'characterlist', component: CharacterlistComponent},
+    { path: 'locationlist', component: LocationlistComponent},
   { path: 'character/:id', component: CharacterComponent},
   { path: 'location/:id', component: LocationComponent},
   { path: 'story/:storyid', component: StoryComponent},
@@ -27,8 +35,13 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'add-character', component: AddCharacterComponent},
-  { path: 'view-characters', component: CharacterListComponent},
-  { path: 'edit-character/:id', component: EditCharacterComponent}
+  { path: 'edit-character/:id', component: EditCharacterComponent},
+  { path: 'edit-location/:id', component: EditLocationComponent},
+  { path: 'add-location', component: AddLocationComponent},
+  { path: 'add-story', component: AddStoryComponent},
+  { path: 'edit-story/:id', component: EditStoryComponent},
+    { path: 'story/:storyid/add-chapter', component: AddChapterComponent},
+    { path: 'chapter/:storyid/edit-chapter/:chapterid', component: EditChapterComponent},
 ];
 
 @NgModule({

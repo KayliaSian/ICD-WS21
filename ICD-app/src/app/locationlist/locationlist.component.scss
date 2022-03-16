@@ -1,12 +1,12 @@
 @import "src/styles.scss";
 
-.story_general{
+.location_general{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
 
-  .chapter_List{
+  .location_List{
     background-color: $color-primary;
     width: 40%;
     padding: 16px;
