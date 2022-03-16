@@ -71,18 +71,32 @@ a:hover {
 
 .background{
   width: 100%;
-  height: 100%;
+  //height: 100%;
   background-color: $color-background;
   font-family: $font-default;
   color: $color-highlight;
   font-size: $fz-h5;
 }
 
+button{
+background-color: $color-primary;
+  border: none;
+  color: $color-highlight;
+  padding: 2px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+button:hover {
+  color: $color-default;
+  cursor: pointer;
+}
+
 .title{
   width: 100%;
   margin : 0px;
-  padding: 48px;
-  font-size: 128px;
+  font-size: 60px;
   line-height: 128px;
   color: $color-default;
   font-weight: bold;

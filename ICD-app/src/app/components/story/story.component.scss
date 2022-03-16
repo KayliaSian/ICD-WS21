@@ -7,16 +7,17 @@
   justify-content: space-evenly;
 
   .chapter_List{
-    background-color: $color-primary;
-    width: 40%;
-    padding: 16px;
-    padding: 16px;
-    margin-bottom: 16px;
-    border-radius: 10px;
+     display: flex;
+     justify-content: space-between;
+     background-color: $color-primary;
+     width: 25%;
+     padding: 16px;
+     margin-bottom: 16px;
+     border-radius: 10px;
 
 
-    text-align: center;
-    line-height: 150%;
+     text-align: center;
+     line-height: 150%;
 
   }
 }

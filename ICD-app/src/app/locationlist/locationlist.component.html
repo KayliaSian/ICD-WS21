@@ -5,12 +5,14 @@
     <div class="location_general">
 
       <div *ngFor="let location of locations"  class="location_List">
+        <div></div>
         <a [href]="'/location/'+location.id">{{location.name}}</a>
         <button
           class="btn btn-outline-danger btn-sm"
           (click)="deleteLocation(location)"
-        >Delete</button
         >
+          <span class="material-icons">delete</span>
+        </button>
       </div>
     </div>
 

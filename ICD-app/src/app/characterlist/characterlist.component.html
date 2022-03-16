@@ -5,12 +5,14 @@
     <div class="character_general">
 
       <div *ngFor="let character of characters"  class="character_List">
+        <div></div>
         <a [href]="'/character/'+character.id">{{character.name}}</a>
         <button
           class="btn btn-outline-danger btn-sm"
           (click)="deleteCharacter(character)"
-        >Delete</button
         >
+          <span class="material-icons">delete</span>
+        </button>
       </div>
     </div>
 

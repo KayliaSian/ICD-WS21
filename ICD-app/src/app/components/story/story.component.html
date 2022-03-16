@@ -6,12 +6,14 @@
 
   <div class="story_general">
     <div *ngFor="let chapter of chapters$|async"  class="chapter_List">
+      <div></div>
       <a [href]="'/chapter/'+this.storyid+'/'+chapter.id">{{chapter.name}}</a>
       <button
         class="btn btn-outline-danger btn-sm"
         (click)="deleteChapter(chapter)"
-      >Delete</button
       >
+        <span class="material-icons">delete</span>
+      </button>
     </div>
 
   </div>

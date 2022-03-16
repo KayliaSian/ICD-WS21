@@ -24,7 +24,7 @@ import { EditChapterComponent } from './shared/edit-chapter/edit-chapter.compone
 
 
 const routes: Routes = [
-  { path: '', component: LandingpageComponent},
+  { path: '', component: LoginComponent},
   { path: 'characterlist', component: CharacterlistComponent},
     { path: 'locationlist', component: LocationlistComponent},
   { path: 'character/:id', component: CharacterComponent},
@@ -32,7 +32,7 @@ const routes: Routes = [
   { path: 'story/:storyid', component: StoryComponent},
   { path: 'chapter/:storyid/:chapterid', component: ChaptersComponent},
   { path: 'stories', component: StoriesComponent},
-  { path: 'login', component: LoginComponent},
+  { path: 'home', component: LandingpageComponent},
   { path: 'signup', component: SignupComponent},
   { path: 'add-character', component: AddCharacterComponent},
   { path: 'edit-character/:id', component: EditCharacterComponent},

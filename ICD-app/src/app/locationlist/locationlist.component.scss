@@ -7,9 +7,10 @@
   justify-content: space-evenly;
 
   .location_List{
+    display: flex;
+    justify-content: space-between;
     background-color: $color-primary;
-    width: 40%;
-    padding: 16px;
+    width: 25%;
     padding: 16px;
     margin-bottom: 16px;
     border-radius: 10px;

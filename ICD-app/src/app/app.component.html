@@ -1,31 +1,52 @@
 <!-- Top navigation -->
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-<div *ngIf="authService.userData as user">
-  <ul class="navbar-nav px-3" >
-    <li class="nav-item text-nowrap">
-      <a class="nav-link" routerLink="/add-character">
-        Character
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/add-character" routerLinkActive="active">
-        Add Student
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/view-characters" routerLinkActive="active">
-        Students List
-      </a>
-    </li>
-  </ul>
-  <ul>
-  <li class="nav-item">
-    <a class="nav-link" (click)="authService.SignOut()">
-      Log out
-    </a>
-  </li>
-  </ul>
-</div>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+<nav class="navbar navbar-dark fixed-top ">
+  <div class="navbar-total">
+
+      <ul>
+        <li class="nav-item text-nowrap" *ngIf="authService.userData as user">
+          <a class="nav-link" routerLink="/home">
+            <span class="material-icons">home</span>
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item" *ngIf="authService.userData as user">
+          <a class="nav-link" routerLink="/characterlist" routerLinkActive="active">
+            <span class="material-icons">people</span>
+            Characters
+          </a>
+        </li>
+
+        <li class="nav-item" *ngIf="authService.userData as user">
+          <a class="nav-link" routerLink="/stories" routerLinkActive="active">
+            <span class="material-icons">import_contacts</span>
+            Stories
+          </a>
+        </li>
+
+        <li class="nav-item" *ngIf="authService.userData as user">
+          <a class="nav-link" routerLink="/locationlist" routerLinkActive="active">
+            <span class="material-icons">map</span>
+            Places
+          </a>
+        </li>
+      </ul>
+
+      <ul>
+      <li class="nav-item" *ngIf="authService.userData as user">
+        <a class="nav-link" routerLink="/" (click)="authService.SignOut()">
+          <span class="material-icons">logout</span>
+          Logout
+        </a>
+      </li>
+      </ul>
+
+  </div>
+
+
 </nav>
 
 <router-outlet></router-outlet>
