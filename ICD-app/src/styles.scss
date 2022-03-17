@@ -4,7 +4,6 @@
 
 
 
-
 // project base colors
 $color-background: #1A2021 !default;
 $color-primary: #1B2528 !default;
@@ -71,7 +70,6 @@ a:hover {
 
 .background{
   width: 100%;
-  //height: 100%;
   background-color: $color-background;
   font-family: $font-default;
   color: $color-highlight;
@@ -113,4 +111,25 @@ button:hover {
   font-weight: bold;
   text-align: center;
   font-family: $font-special;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-primary;
+    border-radius: 30px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+    border-radius: 30px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

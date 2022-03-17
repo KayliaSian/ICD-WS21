@@ -1,19 +1,26 @@
 <div class="background">
-
   <ng-container *ngIf="story$|async as story">
 
-  <div class="bold headline">{{story.name}}</div>
+  <div class="story_content">
 
-  <div class="story_general">
-    <div *ngFor="let chapter of chapters$|async"  class="chapter_List">
-      <div></div>
-      <a [href]="'/chapter/'+this.storyid+'/'+chapter.id">{{chapter.name}}</a>
-      <button
-        class="btn btn-outline-danger btn-sm"
-        (click)="deleteChapter(chapter)"
-      >
-        <span class="material-icons">delete</span>
-      </button>
+    <div class="story_item">
+      <div class="bold headline">{{story.name}}</div>
+      <div *ngFor="let chapter of chapters$|async"  class="chapter_List">
+        <div class="s">
+          <div></div>
+        <a [href]="'/chapter/'+this.storyid+'/'+chapter.id">{{chapter.name}}</a>
+        <button
+          class="btn btn-outline-danger btn-sm"
+          (click)="deleteChapter(chapter)"
+        >
+          <span class="material-icons">delete</span>
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="story_desc">
+      <div class="b"><span class="bold">Description</span>{{story.description}}</div>
     </div>
 
   </div>

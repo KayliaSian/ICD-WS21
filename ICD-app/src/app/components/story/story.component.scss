@@ -1,23 +1,66 @@
 @import "src/styles.scss";
 
-.story_general{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+.background{
+  .story_content{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 16px 0px;
 
-  .chapter_List{
-     display: flex;
-     justify-content: space-between;
-     background-color: $color-primary;
-     width: 25%;
-     padding: 16px;
-     margin-bottom: 16px;
-     border-radius: 10px;
+    .story_item{
+      padding: 0px 36px;
+      width: 35%;
+      margin: 0px 3%;
 
 
-     text-align: center;
-     line-height: 150%;
+      .chapter_List{
+         display: flex;
+         justify-content: space-evenly;
+         background-color: $color-primary;
+
+         padding: 16px;
+         margin-bottom: 16px;
+         border-radius: 10px;
+
+         text-align: center;
+         line-height: 150%;
+
+
+         .s{
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           width: 100%;
+           padding: 8px 24px;
+
+           span, a{
+             width: 35%;
+           }
+         }
+
+      }
+    }
+
+    .story_desc{
+          background-color: $color-primary;
+          text-align: justify;
+          width: 40%;
+          margin: 0px 3%;
+          padding: 32px;
+          border-radius: 10px;
+          //height: 80vh;
+
+          .b{
+            display: flex;
+            flex-direction: column;
+
+            span{
+              text-align:center;
+              font-size: 24px;
+              padding-bottom: 16px;
+            }
+          }
+        }
 
   }
 }
