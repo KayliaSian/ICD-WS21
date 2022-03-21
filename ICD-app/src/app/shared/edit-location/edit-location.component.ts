@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../location.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
 import { ReactiveFormsModule, FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -19,7 +20,8 @@ export class EditLocationComponent implements OnInit {
   constructor(private crudApi: LocationService,
                 private location: Location,
                 private actRoute: ActivatedRoute,
-                private router: Router,) { }
+                private router: Router,
+                public auth: AuthService) { }
 
   ngOnInit(): void {
 

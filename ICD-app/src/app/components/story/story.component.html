@@ -1,10 +1,17 @@
-<div class="background">
+<div class="background" *ngIf="auth.userData as user">
   <ng-container *ngIf="story$|async as story">
 
   <div class="story_content">
 
     <div class="story_item">
-      <div class="bold headline">{{story.name}}</div>
+      <div class="headline story_header">
+        <div></div>
+        {{story.name}}
+        <a [href]="'/edit-story/'+this.storyid"><span class="material-icons">edit</span> </a>
+      </div>
+
+      <div class="link"><a [href]="'/story/'+this.storyid+'/add-chapter'"><span class="material-icons">add</span>Add Chapter</a></div>
+
       <div *ngFor="let chapter of chapters$|async"  class="chapter_List">
         <div class="s">
           <div></div>

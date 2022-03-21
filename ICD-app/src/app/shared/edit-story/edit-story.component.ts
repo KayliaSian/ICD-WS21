@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StoryService } from '../story.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 import { Location } from '@angular/common';
 import { ReactiveFormsModule, FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -17,7 +18,8 @@ export class EditStoryComponent implements OnInit {
   constructor(private crudApi: StoryService,
                 private location: Location,
                 private actRoute: ActivatedRoute,
-                private router: Router,) { }
+                private router: Router,
+                public auth: AuthService) { }
 
   ngOnInit(): void {
     const id = this.actRoute.snapshot.paramMap.get('id')!;

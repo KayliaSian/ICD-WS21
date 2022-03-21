@@ -1,18 +1,16 @@
-<div class="background">
+<div class="background" *ngIf="auth.userData as user">
   <ng-container *ngIf="chapter$|async as chapter">
-  <div class="bold headline">{{chapter.name}}</div>
-
-  <div class="chap_wrap">
-    <div class="chap_general">
-
-      <div><span class="bold">Location: </span> [lName] (Link)</div>
-      <div><span class="bold">Characters: </span> [cName] (Link)</div>
+    <div class="headline story_header">
+      {{chapter.name}}
+      <a [href]="'/story/'+this.storyid+'/edit-chapter/'+this.chapterid"><span class="material-icons">edit</span> </a>
     </div>
 
-    <div class="chap_desc">
-      <div><span class="bold">Chapter: </span> {{chapter.content}}</div>
-    </div>
+    <div class="chap_wrap">
 
-  </div>
+      <div class="chap_desc">
+        {{chapter.content}}
+      </div>
+
+    </div>
   </ng-container>
 </div>

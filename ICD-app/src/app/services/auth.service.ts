@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   userData: any;
+
   constructor(
     public afs: AngularFirestore,
     public afAuth: AngularFireAuth,
@@ -29,6 +30,8 @@ export class AuthService {
         JSON.parse(localStorage.getItem('user')!);
       }
     });
+
+
   }
 
   SignIn(email: string, password: string) {
@@ -62,19 +65,6 @@ export class AuthService {
     return user !== null;
   }
 
-  AuthLogin(provider: any) {
-    return this.afAuth
-      .signInWithPopup(provider)
-      .then((result) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['dashboard']);
-        });
-        this.SetUserData(result.user);
-      })
-      .catch((error) => {
-        window.alert(error);
-      });
-  }
 
   SetUserData(user: any) {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(

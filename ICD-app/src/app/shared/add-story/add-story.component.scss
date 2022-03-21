@@ -1,0 +1,49 @@
+@import "src/styles.scss";
+.component_basics{
+  height: 60%;
+  color: $color-default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .component{
+    background-color: $color-primary;
+    border-radius: 15px;
+    padding: 3.5em;
+    width: 500px;
+
+    .category{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: between;
+
+      .cell{
+        display: flex;
+        overflow-wrap: break-word;
+        align-items: center;
+        width: 90%;
+        padding: 0px 24px;
+
+        label{
+          width: 35%;
+          font-size: 16px;
+        }
+      }
+
+      button{
+        margin: 20px 0px;
+        background-color: $color-secondary;
+        border-radius: 10px;
+        padding: 8px;
+        width: 100%;
+      }
+
+
+     }
+
+  }
+
+
+
+}

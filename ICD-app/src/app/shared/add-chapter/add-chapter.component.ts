@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ChapterService } from '../chapter.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service'
 import { ReactiveFormsModule, FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -14,7 +15,7 @@ export class AddChapterComponent implements OnInit {
       id= '';
       content= '';
 
-  constructor(public crudApi: ChapterService, private router: Router, private route: ActivatedRoute) {
+  constructor(public crudApi: ChapterService, public auth: AuthService, private router: Router, private route: ActivatedRoute) {
       this.storyid =this.route.snapshot.params["storyid"];
   }
 

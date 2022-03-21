@@ -5,8 +5,9 @@
 
 
 // project base colors
-$color-background: #1A2021 !default;
-$color-primary: #1B2528 !default;
+$color-background: #161A1B !default;
+$color-primary: #1A2021 !default;
+$color-secondary: #1C272B !default;
 $color-highlight: #25708C !default;
 $color-default: #30C5FF !default;
 
@@ -77,9 +78,10 @@ a:hover {
 }
 
 button{
-background-color: $color-primary;
+//background-color: $color-primary;
+background-color: transparent;
   border: none;
-  color: $color-highlight;
+  color: $color-default;
   padding: 2px 8px;
   text-align: center;
   text-decoration: none;
@@ -94,7 +96,7 @@ button:hover {
 .title{
   width: 100%;
   margin : 0px;
-  font-size: 60px;
+  font-size: 100px;
   line-height: 128px;
   color: $color-default;
   font-weight: bold;
@@ -104,13 +106,34 @@ button:hover {
 
 .headline{
   margin : 0px;
-  padding: 48px;
-  font-size: 80px;
+  padding-bottom: 48px;
+  font-size: 60px;
   line-height: 80px;
   color: $color-default;
   font-weight: bold;
   text-align: center;
   font-family: $font-special;
+}
+
+.caption{
+  margin : 0px;
+  padding-bottom: 20px;
+  font-size: 40px;
+  line-height: 60px;
+  color: $color-default;
+  font-weight: bold;
+  text-align: center;
+  font-family: $font-special;
+}
+
+input{
+  background-color: $color-secondary;
+  color: $color-default;
+  padding:10px;
+  Margin: 4px;
+  border: 0;
+  border-radius:5px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
 
 ::-webkit-scrollbar {

@@ -1,6 +1,7 @@
-<div class="background">
+<div class="background" *ngIf="auth.userData as user">
   <ng-container *ngIf="locations$|async as locations">
     <div class="bold headline">List of your location</div>
+    <div class="link"><a [href]="'/add-location'"><span class="material-icons">add</span>Add Location</a></div>
 
     <div class="location_general">
 

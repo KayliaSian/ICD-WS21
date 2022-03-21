@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CharacterService } from '../character.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
 import { ReactiveFormsModule, FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
@@ -35,7 +36,8 @@ export class EditCharacterComponent implements OnInit {
   constructor( private crudApi: CharacterService,
                   private location: Location,
                   private actRoute: ActivatedRoute,
-                  private router: Router,) { }
+                  private router: Router,
+                  public auth: AuthService) { }
 
 ngOnInit() {
  const id = this.actRoute.snapshot.paramMap.get('id')!;

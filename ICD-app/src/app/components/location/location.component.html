@@ -1,11 +1,25 @@
-<div class="background">
+<div class="background" *ngIf="auth.userData as user">
   <ng-container *ngIf="location$|async as location">
-    <div class="l_general">
-      <div><span class="bold">Name:</span> {{location.name}}</div>
-      <div><span class="bold">Location Type:</span> {{location.type}}</div>
-      <div><span class="bold">Description:</span> {{location.description}}</div>
 
+    <div class="l_textcontent">
+      <div class="l_item">
+        <div class="bold headline location_header">
+          <div></div>
+          {{location.name}}
+          <a [href]="'/edit-location/'+this.locationid"><span class="material-icons">edit</span> </a>
+        </div>
+
+
+        <div class="l_general">
+          <div class="c"><span class="bold">Location Type:</span> {{location.type}}</div>
+
+        </div>
+
+      </div>
+      <div class="l_desc">
+        <div class="b"><span class="bold">Description:</span> {{location.description}}</div>
+      </div>
     </div>
-
   </ng-container>
 </div>
+

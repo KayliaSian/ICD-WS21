@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChapterService } from '../chapter.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { AuthService } from '../../services/auth.service';
 import { ReactiveFormsModule, FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -21,7 +22,8 @@ export class EditChapterComponent implements OnInit {
   constructor(private crudApi: ChapterService,
               private location: Location,
               private actRoute: ActivatedRoute,
-              private router: Router,) {
+              private router: Router,
+              public auth: AuthService) {
 
                  this.chapterid = this.actRoute.snapshot.paramMap.get('chapterid')!;
                    this.storyid = this.actRoute.snapshot.paramMap.get('storyid')!;

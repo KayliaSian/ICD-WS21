@@ -1,4 +1,12 @@
 @import "src/styles.scss";
+  .background{
+
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-highlight;
+
   .content{
     display: flex;
     flex-direction: row;
@@ -10,7 +18,7 @@
     font-size: $fz-h3;
 
 
-    .OCs, .fics{
+    .OCs, .fics, .places{
             padding: 16px 32px;
       width: 45%;
       height: 100%;
@@ -32,3 +40,4 @@
     }
   }
 
+}

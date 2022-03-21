@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StoryService } from '../story.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 import { ReactiveFormsModule, FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -14,7 +15,7 @@ export class AddStoryComponent implements OnInit {
       id= '';
       description= '';
 
-  constructor(public crudApi: StoryService, private router: Router,) { }
+  constructor(public crudApi: StoryService, private router: Router, public auth: AuthService) { }
 
   ngOnInit(): void {
   this.crudApi.GetStoriesList();

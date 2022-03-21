@@ -1,59 +1,28 @@
-<div
-  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
->
-  <h1 class="h2">Edit Location</h1>
-</div>
+<div class="component_basics" *ngIf="auth.userData as user">
+  <div class="component">
+    <div class="category">
+      <div class="caption">Edit Location</div>
+    </div>
 
-<div class="row">
-  <div class="col-lg-12">
-    <div class="pricing-header form-block mx-auto">
-
+    <div class="category">
       <div>
-        <div class="row">
-          <div class="col-lg-5 col-md-12 col-sm-12">
-            <div class="row">
-
-              <div class="col-md-12 mb-3">
-                <label>Name</label>
-                <input
-                  type="text"
-                  [(ngModel)]="name"
-                  class="form-control"
-                />
-              </div>
-
-
-              <div class="col-md-12 mb-3">
-                <label>Type</label>
-                <input
-                  type="text"
-                  [(ngModel)]="type"
-                  class="form-control" />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12 mb-3">
-                <label>Description</label>
-                <input
-                  type="text"
-                  [(ngModel)]="description"
-                  class="form-control"
-                />
-              </div>
-            </div>
-
-            <div class="form-group text-right">
-              <button
-                type="button"
-                class="btn btn-success btn-block"
-                (click)="updateForm()"
-              >
-                Update Location
-              </button>
-            </div>
-          </div>
+        <div class="cell">
+          <label>Name</label>
+          <input type="text" [(ngModel)]="name" />
         </div>
+
+        <div class="cell">
+          <label>Type</label>
+          <input type="text" [(ngModel)]="type" />
+        </div>
+
+        <div class="cell">
+          <label>Description</label>
+          <input type="text" [(ngModel)]="description" />
+        </div>
+
+        <button (click)="updateForm()">Update Location</button>
+
       </div>
     </div>
   </div>

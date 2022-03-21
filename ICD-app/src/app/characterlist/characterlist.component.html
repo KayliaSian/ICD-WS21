@@ -1,7 +1,7 @@
-<div class="background">
+<div class="background" *ngIf="auth.userData as user">
   <ng-container *ngIf="characters$|async as characters">
-    <div class="bold headline">List of your characters</div>
-
+      <div class="bold headline">List of your characters</div>
+      <div class="link"><a [href]="'/add-character'"><span class="material-icons">add</span>Add Character</a></div>
     <div class="character_general">
 
       <div *ngFor="let character of characters"  class="character_List">

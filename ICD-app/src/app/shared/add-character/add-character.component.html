@@ -1,184 +1,104 @@
-<div class="pt-3 pb-2 mb-3 border-bottom">
-  <h2 class="h2">Add Character</h2>
-</div>
-<div>
-  <div class="row">
-    <div class="col-lg-5 col-md-12 col-sm-12">
-      <div class="row">
+<div class="component_basics" *ngIf="auth.userData as user">
+  <div class="component">
+    <div class="category">
+      <div class="caption">Add Character</div>
+    </div>
 
-        <div class="col-md-12 mb-3">
-          <label>Name</label>
-          <input
-            type="text"
-            [(ngModel)]="name"
-            class="form-control"
-          />
+    <div class="category">
+      <div>
+
+        <div class="cell">
+          <label>Full Name</label>
+          <input type="text" [(ngModel)]="name"/>
         </div>
-        <div class="col-md-12 mb-3">
+
+        <div class="cell">
           <label>ID</label>
-          <input
-            type="text"
-            [(ngModel)]="id"
-            class="form-control"
-
-          />
+          <input type="text" [(ngModel)]="id"/>
         </div>
 
-        <div class="col-md-12 mb-3">
-          <label>nickname</label>
-          <input
-            type="text"
-            [(ngModel)]="nickname"
-            class="form-control" />
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 mb-3">
-          <label>age</label>
-          <input
-            type="text"
-            [(ngModel)]="age"
-            class="form-control"
-          />
+        <div class="cell">
+          <label>Nickname</label>
+          <input type="text" [(ngModel)]="nickname"/>
         </div>
 
-        <div class="col-md-12 mb-3">
-          <label>birthdate</label>
-          <input
-            type="text"
-            [(ngModel)]="birthdate"
-            class="form-control"
-          />
+        <div class="cell">
+          <label>Age</label>
+          <input type="text" [(ngModel)]="age"/>
         </div>
 
-      <div class="col-md-12 mb-3">
-        <label>birthplace</label>
-        <input
-          type="text"
-          [(ngModel)]="birthplace"
-          class="form-control"
-        />
-      </div>
+        <div class="cell">
+          <label>Date of Birth</label>
+          <input type="text" [(ngModel)]="birthdate"/>
+        </div>
 
-    <div class="col-md-12 mb-3">
-      <label>mother</label>
-      <input
-        type="text"
-        [(ngModel)]="mother"
-        class="form-control"
-      />
-    </div>
+        <div class="cell">
+          <label>Place of Birth</label>
+          <input type="text" [(ngModel)]="birthplace"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>father</label>
-    <input
-      type="text"
-      [(ngModel)]="father"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>Mother</label>
+          <input type="text" [(ngModel)]="mother"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>siblings</label>
-    <input
-      type="text"
-      [(ngModel)]="siblings"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>Father</label>
+          <input type="text" [(ngModel)]="father"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>haircolour</label>
-    <input
-      type="text"
-      [(ngModel)]="haircolour"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>Siblings</label>
+          <input type="text" [(ngModel)]="siblings"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>eyecolour</label>
-    <input
-      type="text"
-      [(ngModel)]="eyecolour"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>Hair Colour</label>
+          <input type="text" [(ngModel)]="haircolour"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>height</label>
-    <input
-      type="text"
-      [(ngModel)]="height"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>Eye Colour</label>
+          <input type="text" [(ngModel)]="eyecolour"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>weight</label>
-    <input
-      type="text"
-      [(ngModel)]="weight"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>Height</label>
+          <input type="text" [(ngModel)]="height"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>bodytype</label>
-    <input
-      type="text"
-      [(ngModel)]="bodytype"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>Weight</label>
+          <input type="text" [(ngModel)]="weight"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>traits</label>
-    <input
-      type="text"
-      [(ngModel)]="traits"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>Bodytype</label>
+          <input type="text" [(ngModel)]="bodytype"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>likes</label>
-    <input
-      type="text"
-      [(ngModel)]="likes"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>traits</label>
+          <input type="text" [(ngModel)]="traits"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>dislikes</label>
-    <input
-      type="text"
-      [(ngModel)]="dislikes"
-      class="form-control"
-    />
-  </div>
+        <div class="cell">
+          <label>Likes</label>
+          <input type="text" [(ngModel)]="likes"/>
+        </div>
 
-  <div class="col-md-12 mb-3">
-    <label>backstory</label>
-    <input
-      type="text"
-      [(ngModel)]="backstory"
-      class="form-control"
-    />
-  </div>
-      </div>
+        <div class="cell">
+          <label>Dislikes</label>
+          <input type="text" [(ngModel)]="dislikes"/>
+        </div>
 
-      <div class="form-group text-right">
-        <button
-          type="button"
-          class="btn btn-success"
-          (click)="submitCharacterData()"
-        >
-          Add Character
-        </button>
+        <div class="cell">
+          <label>Backstory</label>
+          <textarea class="textarea" [(ngModel)]="backstory"></textarea>
+        </div>
+
+        <button (click)="submitCharacterData()">Add Character</button>
+
       </div>
     </div>
   </div>
-</div>

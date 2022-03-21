@@ -1,185 +1,148 @@
-<div
-  class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
->
-  <h1 class="h2">Edit Character</h1>
-</div>
+<div class="component_basics" *ngIf="auth.userData as user">
+  <div class="component">
+    <div class="category">
+      <div class="caption">Edit Character</div>
+    </div>
 
-<div class="row">
-  <div class="col-lg-12">
-    <div class="pricing-header form-block mx-auto">
+    <div class="category">
+      <div class="row">
 
-      <div>
-        <div class="row">
-          <div class="col-lg-5 col-md-12 col-sm-12">
-            <div class="row">
-
-              <div class="col-md-12 mb-3">
-                <label>Name</label>
-                <input
-                  type="text"
-                  [(ngModel)]="name"
-                  class="form-control"
-                />
-              </div>
-
-
-              <div class="col-md-12 mb-3">
-                <label>nickname</label>
-                <input
-                  type="text"
-                  [(ngModel)]="nickname"
-                  class="form-control" />
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-12 mb-3">
-                <label>age</label>
-                <input
-                  type="text"
-                  [(ngModel)]="age"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>birthdate</label>
-                <input
-                  type="text"
-                  [(ngModel)]="birthdate"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>birthplace</label>
-                <input
-                  type="text"
-                  [(ngModel)]="birthplace"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>mother</label>
-                <input
-                  type="text"
-                  [(ngModel)]="mother"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>father</label>
-                <input
-                  type="text"
-                  [(ngModel)]="father"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>siblings</label>
-                <input
-                  type="text"
-                  [(ngModel)]="siblings"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>haircolour</label>
-                <input
-                  type="text"
-                  [(ngModel)]="haircolour"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>eyecolour</label>
-                <input
-                  type="text"
-                  [(ngModel)]="eyecolour"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>height</label>
-                <input
-                  type="text"
-                  [(ngModel)]="height"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>weight</label>
-                <input
-                  type="text"
-                  [(ngModel)]="weight"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>bodytype</label>
-                <input
-                  type="text"
-                  [(ngModel)]="bodytype"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>traits</label>
-                <input
-                  type="text"
-                  [(ngModel)]="traits"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>likes</label>
-                <input
-                  type="text"
-                  [(ngModel)]="likes"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>dislikes</label>
-                <input
-                  type="text"
-                  [(ngModel)]="dislikes"
-                  class="form-control"
-                />
-              </div>
-
-              <div class="col-md-12 mb-3">
-                <label>backstory</label>
-                <input
-                  type="text"
-                  [(ngModel)]="backstory"
-                  class="form-control"
-                />
-              </div>
-            </div>
-            <div class="form-group text-right">
-              <button
-                type="button"
-                class="btn btn-success btn-block"
-                (click)="updateForm()"
-              >
-                Update Character
-              </button>
-            </div>
-          </div>
+        <div class="cell">
+          <label>Full Name</label>
+          <input
+            type="text"
+            [(ngModel)]="name"
+          />
         </div>
+
+        <div class="cell">
+          <label>Nickname(s)</label>
+          <input
+            type="text"
+            [(ngModel)]="nickname"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Age</label>
+          <input
+            type="text"
+            [(ngModel)]="age"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Date of Birth</label>
+          <input
+            type="text"
+            [(ngModel)]="birthdate"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Place of Birth</label>
+          <input
+            type="text"
+            [(ngModel)]="birthplace"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Mother</label>
+          <input
+            type="text"
+            [(ngModel)]="mother"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Father</label>
+          <input
+            type="text"
+            [(ngModel)]="father"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Siblings</label>
+          <input
+            type="text"
+            [(ngModel)]="siblings"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Hair Colour</label>
+          <input
+            type="text"
+            [(ngModel)]="haircolour"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Eye Colour</label>
+          <input
+            type="text"
+            [(ngModel)]="eyecolour"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Height</label>
+          <input
+            type="text"
+            [(ngModel)]="height"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Weight</label>
+          <input
+            type="text"
+            [(ngModel)]="weight"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Bodytype</label>
+          <input
+            type="text"
+            [(ngModel)]="bodytype"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Traits</label>
+          <input
+            type="text"
+            [(ngModel)]="traits"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Likes</label>
+          <input
+            type="text"
+            [(ngModel)]="likes"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Dislikes</label>
+          <input
+            type="text"
+            [(ngModel)]="dislikes"
+          />
+        </div>
+
+        <div class="cell">
+          <label>Backstory</label>
+          <textarea [(ngModel)]="backstory" class="textarea"></textarea>
+        </div>
+
+
+        <button (click)="updateForm()">Update Character</button>
+
       </div>
     </div>
   </div>
-</div>

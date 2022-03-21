@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CharacterService } from '../character.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service'
 import { ReactiveFormsModule, FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -32,7 +33,8 @@ export class AddCharacterComponent implements OnInit {
 
   constructor(
     public crudApi: CharacterService,
-    private router: Router
+    private router: Router,
+    public auth: AuthService
   ) {
    }
 

@@ -1,57 +1,34 @@
-<div class="pt-3 pb-2 mb-3 border-bottom">
-  <h2 class="h2">Add Location</h2>
-</div>
-<div>
-  <div class="row">
-    <div class="col-lg-5 col-md-12 col-sm-12">
-      <div class="row">
+<div class="component_basics" *ngIf="auth.userData as user">
+  <div class="component">
+    <div class="category">
+      <div class="caption">Add Location</div>
+    </div>
 
-        <div class="col-md-12 mb-3">
+    <div class="category">
+      <div>
+
+        <div class="cell">
           <label>Name</label>
-          <input
-            type="text"
-            [(ngModel)]="name"
-            class="form-control"
-          />
+          <input type="text" [(ngModel)]="name"/>
         </div>
-        <div class="col-md-12 mb-3">
+
+        <div class="cell">
           <label>ID</label>
-          <input
-            type="text"
-            [(ngModel)]="id"
-            class="form-control"
-
-          />
+          <input type="text" [(ngModel)]="id"/>
         </div>
 
-        <div class="col-md-12 mb-3">
+        <div class="cell">
           <label>Type</label>
-          <input
-            type="text"
-            [(ngModel)]="type"
-            class="form-control" />
+          <input type="text" [(ngModel)]="type"/>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-md-12 mb-3">
+        <div class="cell">
           <label>Description</label>
-          <input
-            type="text"
-            [(ngModel)]="description"
-            class="form-control"
-          />
+          <input type="text" [(ngModel)]="description"/>
         </div>
-      </div>
 
-      <div class="form-group text-right">
-        <button
-          type="button"
-          class="btn btn-success"
-          (click)="submitLocationData()"
-        >
-          Add Location
-        </button>
+        <button (click)="submitLocationData()">Add Location</button>
+
       </div>
     </div>
   </div>

@@ -1,6 +1,8 @@
-<div class="background">
+<div class="background" *ngIf="auth.userData as user">
 <ng-container *ngIf="stories$|async as stories">
   <div class="bold headline">All your Stories</div>
+  <div class="link"><a [href]="'/add-story'"><span class="material-icons">add</span>Add Story</a></div>
+
 
   <div class="stories_general">
     <div *ngFor="let story of stories" class="stories_List">

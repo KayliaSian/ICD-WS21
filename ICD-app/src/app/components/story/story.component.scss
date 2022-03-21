@@ -5,12 +5,28 @@
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    padding: 16px 0px;
+      padding-top: 64px;
 
     .story_item{
       padding: 0px 36px;
       width: 35%;
       margin: 0px 3%;
+
+      .link{
+        display: flex;
+        justify-content: flex-end;
+        padding: 8px;
+      }
+
+      .headline{
+        padding: 64px 16px;
+      }
+
+      .story_header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
 
       .chapter_List{
@@ -34,7 +50,7 @@
            padding: 8px 24px;
 
            span, a{
-             width: 35%;
+             width: 30%;
            }
          }
 

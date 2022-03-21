@@ -1,5 +1,28 @@
 @import "src/styles.scss";
 
+.link{
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px;
+  margin-right: 64px;
+  align-content: center;
+
+
+  a {
+     display: inline-block;
+     position: relative;
+     z-index: 1;
+     padding: 0.5em;
+
+     .material-icons{
+         display: inline-flex;
+         vertical-align: top;
+         font-size: 22px;
+     }
+
+  }
+}
+
 .location_general{
   display: flex;
   flex-direction: row;
@@ -19,5 +42,8 @@
     text-align: center;
     line-height: 150%;
 
+    button{
+        color: $color-highlight;
+    }
   }
 }

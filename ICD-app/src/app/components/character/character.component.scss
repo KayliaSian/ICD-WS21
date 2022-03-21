@@ -4,12 +4,19 @@
       display: flex;
       justify-content: space-evenly;
       width: 100%;
-      padding: 16px 0px;
+      padding-top: 64px;
 
     .c_item{
       padding: 0px 36px;
       width: 30%;
       margin: 0px 3%;
+
+      .story_header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
 
       .c_general, .c_family, .c_appearance, .c_character, .c_backstory{
         background-color: $color-primary;
@@ -26,7 +33,7 @@
           display: flex;
           overflow-wrap: break-word;
           align-items: flex-start;
-          width: 80%;
+          width: 95%;
           padding: 8px 24px;
 
           span{

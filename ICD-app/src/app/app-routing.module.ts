@@ -40,8 +40,8 @@ const routes: Routes = [
   { path: 'add-location', component: AddLocationComponent},
   { path: 'add-story', component: AddStoryComponent},
   { path: 'edit-story/:id', component: EditStoryComponent},
-    { path: 'story/:storyid/add-chapter', component: AddChapterComponent},
-    { path: 'chapter/:storyid/edit-chapter/:chapterid', component: EditChapterComponent},
+  { path: 'story/:storyid/add-chapter', component: AddChapterComponent},
+  { path: 'chapter/:storyid/edit-chapter/:chapterid', component: EditChapterComponent},
 ];
 
 @NgModule({

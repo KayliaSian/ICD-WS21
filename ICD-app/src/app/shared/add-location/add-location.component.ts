@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocationService } from '../location.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 import { ReactiveFormsModule, FormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -15,7 +16,7 @@ export class AddLocationComponent implements OnInit {
       type= '';
       description= '';
 
-  constructor(public crudApi: LocationService, private router: Router,) { }
+  constructor(public crudApi: LocationService, private router: Router, public auth: AuthService) { }
 
   ngOnInit(): void {
   this.crudApi.GetLocationsList();
